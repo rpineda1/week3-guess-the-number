@@ -1,15 +1,13 @@
 'Ricardo Pineda'
 import random
-import guessTheNumberUpgrade
 # -------------------------------------------------------------------
 # this is the generateNumber function
 # it has one parameter:
 #   'topLimit' which is the top limit for the random number generator
 # the function returns the random number generated to its caller
 def generateNumber( topLimit ):
-    secretNumber = random.randint(1, topLimit)
-    
-    
+    return random.randint(1, topLimit)
+
     
     # TO DO: ####################################################
     # Write code in this function that calculates and           #
@@ -79,7 +77,6 @@ def evaluateAnswer( userGuess, userSecretNumber ):
 def playGame( showAnswer ):
     theNumber == secretNumber
 
-
     # TO DO: ####################################################
     # Write code in this function that                          #
     # 1. Greets the user                                        #
@@ -112,9 +109,8 @@ print("okay... hmm I'm thinking of a number betweeen 1 and " + str(topLimit) + "
 print("you have " + str(totalGuesses) + " tries to guess it")
 secretNumber = random.randint(1, topLimit)
 askUserToGuess(totalGuesses, secretNumber )
-theNumber = secretNumber
-playGame(secretNumber)
-   
+theNumber = generateNumber( topLimit )
+
 # you don't need to change anything below this comment ##############
     # ///////////////////////////////////////////////////////////////////
     # this if statement allows us to show the hidden number to the user
